@@ -10,7 +10,7 @@ create table NguoiDung(
 	Email nvarchar(100) not null unique,
 	MatKhau nvarchar(50) not null,
 	DiaChi nvarchar(50) not null,
-	role nvarchar(50) not null check(role in(N'Quan Tri Vien','Nguoi Dung')) DEFAULT 'Nguoi Dung',
+	VaiTro nvarchar(50) not null check(VaiTro in(N'Quan Tri Vien','Nguoi Dung')) DEFAULT 'Nguoi Dung',
 	NgayTaoTK datetime default getdate()
 );
 
