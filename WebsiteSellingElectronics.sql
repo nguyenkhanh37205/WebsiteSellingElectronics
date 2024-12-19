@@ -5,7 +5,7 @@ go
 
 --Nguoi dung
 create table NguoiDung(
-	MaND int not null primary key,
+	MaND int IDENTITY(1,1) PRIMARY KEY,
 	HoTen nvarchar(50) not null,
 	Email nvarchar(100) not null unique,
 	MatKhau nvarchar(50) not null,
@@ -23,7 +23,7 @@ create table DanhMucSP(
 
 --San pham
 create table SanPham(
-	MaSP int not null primary key,
+	MaSP int IDENTITY(1,1) PRIMARY KEY,
 	TenSP nvarchar(50) not null,
 	MoTaSP nvarchar(max),
 	NhanHang nvarchar(50) not null,
