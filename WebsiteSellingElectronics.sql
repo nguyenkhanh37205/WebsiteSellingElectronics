@@ -50,8 +50,8 @@ create table ChiTietDonHang(
 	MaChiTietDonHang int IDENTITY(1,1) PRIMARY KEY,
 	MaDH int not null,
 	MaSP int not null,
-	quantity decimal(10,2) not null,--so luong san pham
-	price decimal(10,2) not null,--gia tai thoi diem dat hang
+	SoLuong decimal(10,2) not null,--so luong san pham
+	GiaTien decimal(10,2) not null,--gia tai thoi diem dat hang
 	foreign key (MaDH)  references DonHang(MaDH),
 	foreign key (MaSP) references SanPham(MaSP),
 );
