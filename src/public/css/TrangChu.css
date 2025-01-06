@@ -1,0 +1,378 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+li{
+    list-style-type: none;
+}
+#khung{
+    width: 100%;
+    height: 6000px;
+    background-color: #181717;
+}
+#phandau{
+    background-color: #040404;
+    height: 100px;
+
+}
+.khungdau{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+.khungdau ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.khungdau ul li a img{
+    width: 250px;
+    height: 100%;
+    border: none;
+}
+.khungdau ul li:nth-child(2){
+    position: relative;
+}
+.khungdau ul li:nth-child(2) input{
+    height: 40px;
+    width: 300px;
+
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.khungdau ul li:nth-child(2) i{
+    position: absolute;
+    font-size: 15px;
+    color: red;
+    right: 12px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.khungdau ul li:nth-child(3) button{
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 20px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+
+/* .khungdau ul li:nth-child(3) button{
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 20px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+} */
+.khungdau ul li:nth-child(3) button i{
+    margin-right: 6px;
+}
+.khungdau ul li:nth-child(3) button:hover{
+    background-color: red;
+    color: black;
+    border: #000000;
+}
+.khungdau ul li:nth-child(4) button{
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 20px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #f8f8f8;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+.khungdau ul li:nth-child(4) button i{
+    margin-right: 6px;
+}
+.khungdau ul li:nth-child(4) button:hover{
+    background-color: red;
+    color: black;
+    border: #181717;
+}
+.khungdau ul li:nth-child(5) a{
+    transition: all 0.5s ease;
+}
+.khungdau ul li:nth-child(5) a:hover{
+    color: rgb(255, 0, 0);
+}
+.mua ul {    
+    display: flex;
+}
+
+#phanthan{
+    width: 1200px;
+    height: 3200px;
+    margin: auto;
+    background-color: rgb(138, 131, 131);
+}
+.bieungu {
+    margin: auto;
+    max-width: 100vw;
+    width: 1200px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.danhsach{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+}
+.danhsach img{
+    width: 1200px;
+    max-width: 100vw ;
+    height: 100%;
+    
+}
+.nut{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    
+}
+.nut button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff5;
+    font-family: monospace;
+    font-weight: bold;
+    
+}
+.nut button:hover{
+    background-color: #d7cece;
+    color: #cd0303;
+}
+.cham{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.cham li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition:  1s;
+}
+.cham li.hoatdong{
+    width: 30px;
+}
+.cham li:hover{
+    cursor: pointer;
+}
+#tieude ul{
+    display: flex;
+    height: 70px;
+    align-items: center;
+}
+#tieude ul li:nth-child(2) button {
+    margin: 0 40px;
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 10px ;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #040404;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+#tieude ul li:nth-child(2) button:hover{
+    border: 2px solid #cd0303;
+    color: #cd0303;
+}
+#tieude ul li:nth-child(3) button {
+    margin: 0 40px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 10px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #040404;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+#tieude ul li:nth-child(3) button:hover{
+    border: 2px solid #cd0303;
+    color: #cd0303;
+}
+#tieude ul li:nth-child(5) button {
+    margin: 0 40px;
+    height: 40px;
+    padding: 0 60px;
+    border-radius: 10px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #040404;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+#tieude ul li:nth-child(4) button {
+    margin: 0 40px;
+    height: 40px;
+    padding: 0 90px;
+    border-radius: 10px ;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    color: #040404;
+    border: 2px solid #f8f8f8;
+    transition: all 0.5s ease;
+}
+#tieude ul li h1{
+    padding: 10px 20px;
+    color: #f8f8f8;
+}
+.sanpham{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.sanpham_a{
+    width: 270px;
+    height: 550px;
+    margin: 15px;
+    background-color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.sanpham_a:hover{
+    
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+}
+.anh{
+    display: block;
+    overflow: hidden;
+}
+.anh img{
+    object-fit: contain ;
+    height: 100%;
+    transition:  150ms ease;
+    max-width: 100vw;
+}
+.anh img:hover{
+    transform: scale(1.06);
+   
+}
+
+.sanpham_a a img{
+    width: 90%;
+    margin: 15px;
+    height: 220px;
+}
+.sanpham_a h3 a{
+    margin: 6px 10px   ;
+    color: #000000;
+    
+}
+.sanpham_a h3 a:hover{
+    color: #db5757;
+}
+.gia span:nth-child(1){
+    font-size: 22px;
+    color: #cd0303;
+}
+.gia span:nth-child(2){
+    text-decoration: line-through;
+}
+.gia{
+    margin: 6px 12px;
+    display: grid;
+    color: gray;
+}
+.thongtin{
+    background-color: #f0f0f0;
+    margin: 6px 20px;
+}
+.thongtin ul {
+    padding: 6px ;
+}
+.thongtin ul li{
+    list-style-type: disc;
+    margin-top: 6px;
+    margin: 0 20px;
+    color: #232121;
+}
+.mua{
+    margin: 20px 5px;
+}
+.mua .nutsp{
+    display: flex;
+    justify-content: space-around;
+}
+.a{
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 15px;
+    border-radius: 30px;
+    background-color: rgba(237, 41, 41, 0.916);
+}
+
+.b{
+    border-radius: 30px;
+    background-color: rgb(190, 190, 190);
+    border: none;
+    font-weight: bolder;
+    padding: 15px 10px;
+}
+#phancuoi{
+    margin: auto;
+    background-color: #c2c2c2;
+    height: 400px;
+    width: 1200px;
+}
+.noidung{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-evenly;
+}
+.noidung-a p{
+    padding: 5px 0;
+}
+
+.lienket{
+    display: wrap;
+    justify-content: space-around;
+}
+.lienket a{
+    font-size: 30px;
+}
