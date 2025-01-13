@@ -11,18 +11,21 @@
 <body>
     <div class="container">
         <h1>Đăng nhập</h1>
-        <form id="loginForm">
+        <form action="/DangNhap" method="post">
             <div class="form-control">
-                <input type="email" id="email" placeholder="Email" />
+                <input type="email" id="Email" name="Email" placeholder="Email" />
                 <small></small>
             </div>
             <div class="form-control">
-                <input type="password" id="password" placeholder="Mật khẩu" />
+                <input type="password" id="MatKhau" name="MatKhau" placeholder="Mật khẩu" />
                 <small></small>
             </div>
             <button type="submit">Đăng nhập</button>
             <div class="signup_link">Chưa có tài khoản? <a href="/DangKy">Đăng ký</a></div>
         </form>
+        <% if (message) { %>
+            <p style="color: red;"><%= message %></p>
+        <% } %>
     </div>
 
     <script src="/js/DangNhap.js"></script>

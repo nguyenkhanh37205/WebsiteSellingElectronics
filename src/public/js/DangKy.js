@@ -51,7 +51,7 @@ document.querySelector('#registerForm').addEventListener('submit', function (e) 
 
 	// Nếu tất cả đều hợp lệ, chuyển hướng đến trang chủ
 	if (isValid) {
-		window.location.href = "/WebBanDoDienTu/TrangChu/TrangChu.html";
+		window.location.href = "/TrangChu";
 	}
 });
 

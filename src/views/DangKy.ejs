@@ -13,17 +13,21 @@
 <body>
 	<div class="container">
 		<h1>Đăng ký</h1>
-		<form id="registerForm">
+		<form action="/DangKy" method="post">
 			<div class="form-control">
-				<input type="text" id="username" placeholder="Tên người dùng" />
+				<input type="text" id="HoTen" placeholder="Tên người dùng" name="HoTen"/>
 				<small></small>
 			</div>
 			<div class="form-control">
-				<input type="email" id="email" placeholder="Email" />
+				<input type="email" id="Email" placeholder="Email" name="Email"/>
 				<small></small>
 			</div>
+			<!-- <div class="form-control">
+				<input type="address" id="address" placeholder="Địa Chỉ" name="DiaChi"/>
+				<small></small>
+			</div> -->
 			<div class="form-control">
-				<input type="password" id="password" placeholder="Mật khẩu" />
+				<input type="password" id="MatKhau" placeholder="Mật khẩu" name="MatKhau"/>
 				<small></small>
 			</div>
 			<div class="form-control">
@@ -32,6 +36,9 @@
 			</div>
 			<button type="submit">Đăng Ký</button>
 		</form>
+		<% if (message) { %>
+			<p style="color: red;"><%= message %></p>
+		<% } %>
 	</div>
 	<script src="/js/DangKy.js"></script>
 </body>

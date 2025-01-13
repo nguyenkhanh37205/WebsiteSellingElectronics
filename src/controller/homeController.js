@@ -1,33 +1,32 @@
-import connection from '../configs/connectDB.js';
+import pool from '../configs/connectDB.js';
+import bcrypt from 'bcrypt';
 
-let getHomepage = (req, res) => {
-
-    //logics
-    let data = [];
-    connection.query(
-    'SELECT * FROM `users`',
-    function (err, results, fields) {
-        results.map(row => {data.push(
-            {
-                id: row.id,
-                firstName: row.firstName,
-                lastName: row.lastName,
-                email: row.email,
-                address: row.address
-            }
-        )
-
-    });
-        // console.log('data inside',data); // fields contains extra meta data about results, if available
-        // console.log(rows); // fields contains extra meta data about results, if available 
-        return res.render('TrangChu.ejs',{dataUser: JSON.stringify(data)});
-    })
-
-    // console.log('>>>Check data<<<',typeof(data), JSON.stringify(data));
-
-    
+let getHomepage = async (req, res) => {
+    try {
+        const [rows, fields] = await pool.query('SELECT * FROM nguoidung');
+        return res.render('TrangChu', { users: rows });
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send('Lỗi khi lấy dữ liệu người dùng');
+    }
 };
 
-module.exports = { 
-    getHomepage: getHomepage
-}
+let createNewUser = async (req, res) => {
+    let { HoTen, Email, MatKhau } = req.body;
+    try {
+        // Mã hóa mật khẩu
+        const hashedPassword = await bcrypt.hash(MatKhau, 10);
+
+        // Thêm người dùng vào cơ sở dữ liệu
+        await pool.execute('INSERT INTO nguoidung (HoTen, Email, MatKhau) VALUES (?, ?, ?)', [HoTen, Email, hashedPassword]);
+        return res.redirect('/'); // Chuyển hướng đến trang chủ
+    } catch (err) {
+        console.error(err);
+        return res.status(500).send('Lỗi khi tạo người dùng');
+    }
+};
+
+module.exports = {
+    getHomepage,
+    createNewUser
+};
