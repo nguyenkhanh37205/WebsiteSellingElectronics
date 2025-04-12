@@ -6,7 +6,7 @@ import session from 'express-session';
 require('dotenv').config();
 
 const app = express()
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.use(session({
     secret: process.env.SESSION_SECRET || 'default-secret-key',  // Dùng một key bí mật để mã hóa phiên
